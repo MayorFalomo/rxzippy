@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img{
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Stinger';
+  src: url('/fonts/stinger/StingerTrial-Regular.ttf') format('truetype'), 
+  url('/fonts/stinger/StingerTrial-Light.tff') format('truetype'),
+  url('/fonts/stinger/StingerFitTrial-Reglar.tff') format('truetype'),
+  url('/fonts/stinger/StingerFitTrial-Bold.tff') format('truetype');
+  
+  /* font-weight: normal; */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HkGrotesk';
+  src: url('/fonts/hkGrotesk/hkGroteskMedium.ttf') format('woff2'), 
+  url('/fonts/hkGrotesk/hkGroteskRegular.ttf') format('woff2');
+  
+}
+@font-face {
+  font-family: 'Sherika';
+  src: url('/fonts/sherika/SherikaMedium.ttf') format('woff2'), 
+  url('/fonts/sherika/SherikaMedium.otf') format('woff2');
+
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/InterMedium.ttf') format('woff2'), 
+  url('/fonts/inter/InterSemiBold.ttf') format('woff2');
+  
+}
+
+@font-face {
+  font-family: 'darkerGrotesque';
+  src: url('/fonts/darkerGrotesque/DarkerGrotesque-Medium.ttf') format('woff2'), 
+  url('/fonts/darkerGrotesque/DarkerGrotesque-SemiBold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'plusJakartaSans';
+  src: url('/fonts/plusJarkataSans/PlusJakartaSans-Medium.ttf') format('woff2'), 
+  url('/fonts/plusJarkataSans/PlusJakartaSans-Regular.ttf') format('woff2');
+
+}
+
+@font-face {
+  font-family: 'cabinetGrotesk';
+  src: url('/fonts/cabinetGrotesk/CabinetGrotesk-Medium.otf') format('woff2'), 
+  url('/fonts/cabinetGrotesk/CabinetGrotesk-Regular.otf') format('woff2');
+}
+
+@font-face {
+  font-family: 'clashDisplay';
+  src: url('/fonts/clashDisplay/ClashDisplay-Medium.otf') format('woff2'), 
+  url('/fonts/clashDisplay/ClashDisplay-Regular.otf') format('woff2');
+}
+
+@font-face {
+  font-family: 'lato';
+  src: 
+  url('/fonts/lato/Lato-Light.ttf') format('woff2'),url('/fonts/lato/Lato-Black.ttf') format('woff2'), 
+  url('/fonts/lato/Lato-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: 
+  url('/fonts/poppins/Poppins-SemiBold.ttf') format('woff2'),
+  url('/fonts/poppins/Poppins-Regular.ttf') format('woff2'), 
+  url('/fonts/poppins/Poppins-Medium.ttf') format('woff2');
+}
+
