@@ -61,7 +61,7 @@ export function Navbar() {
                 <Link to={nav.path}>{nav.navItem}</Link>
                 <Popover>
                   {nav.path === "/services" && (
-                    <PopoverTrigger className="p-0 m-0 border-2 border-red-400">
+                    <PopoverTrigger className="p-0 m-0 ">
                       <span
                         className="relative p-2 z-60"
                         onClick={() => setShowPages(!showPages)}
