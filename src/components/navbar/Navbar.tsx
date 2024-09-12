@@ -2,6 +2,7 @@ import { Nav } from "../../types/NavTypes";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "@/assets/logo.webp";
 import { useState } from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/ui/popover";
 
 export function Navbar() {
   const navbar: Nav[] = [
@@ -28,6 +29,7 @@ export function Navbar() {
   ];
 
   const [menuState, setMenuState] = useState<boolean>(false);
+  const [showPages, setShowPages] = useState(false);
 
   const pathname = useLocation();
 
@@ -41,25 +43,58 @@ export function Navbar() {
           className={
             menuState
               ? `fixed right-0 top-0 h-[100vh] w-[70%] flex flex-col justify-center items-center gap-[30px] bg-primary z-30 transition-all ease-out duration-500`
-              : `flex items-center justify-around min-[1550px]:w-[40%] max-[1500px]:w-[55%] max-[1150px]:w-[65%] text-[1.125rem] gap-[15px] max-[960px]:fixed max-[960px]:right-[-200vw] max-[960px]:top-0 max-[960px]:h-[100vh] max-[960px]:w-0 bg-primary transition-all ease-out duration-500`
+              : `flex items-center justify-around min-[1550px]:w-[50%] max-[1500px]:w-[55%] max-[1150px]:w-[65%] text-[1.125rem] gap-[15px] max-[960px]:fixed max-[960px]:right-[-200vw] max-[960px]:top-0 max-[960px]:h-[100vh] max-[960px]:w-0 bg-primary transition-all ease-out duration-500`
           }
         >
           {navbar.map((nav: Nav) => (
             <li
-              className="list-none cursor-pointer group relative inline-block text-secondary font-normal"
+              className="z-30 list-none cursor-pointer group relative inline-block text-secondary font-normal"
               key={nav.path}
             >
-              <Link
-                className={`block relative py-2 px-4 transition-colors duration-500 ${
-                  pathname.pathname === nav.path
-                    ? "text-golden_yellow"
-                    : "text-off-white hover:text-golden_yellow"
-                }`}
-                to={nav.path}
-              >
-                {nav.navItem}{" "}
-                <span className="absolute bottom-[2px] left-0 w-full h-[2px] bg-white scale-x-0 origin-bottom-right group-hover:scale-x-100 group-hover:origin-bottom-left transition-transform duration-500 ease-out"></span>
-              </Link>
+              <Popover>
+                <div
+                  className={`flex items-center gap-[20px] relative py-2 px-4 transition-colors duration-500 ${
+                    pathname.pathname === nav.path
+                      ? "text-golden_yellow"
+                      : "text-off-white hover:text-golden_yellow"
+                  }`}
+                >
+                  <PopoverTrigger>
+                    <Link to={nav.path}>{nav.navItem}</Link>
+                  </PopoverTrigger>
+                  {nav.path === "/services" && (
+                    <span
+                      className="relative p-2 z-60"
+                      onClick={() => setShowPages(!showPages)}
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                  )}
+                  <PopoverContent>
+                    {showPages && nav.path === "/services" && (
+                      <p className="absolute bottom-[-80px] left-0 z-20 h-[60px] w-[120px] flex flex-col items-start justify-start px-2 text-offBlack bg-white">
+                        <Link to={nav.path}>services </Link>
+                        {/* <span className="bg-primary h-[1px] w-full"></span> */}
+                        <Link to="/medical">medical </Link>
+                      </p>
+                    )}
+                  </PopoverContent>
+                </div>
+              </Popover>
+              <span className="absolute bottom-[2px] left-0 w-full h-[2px] bg-white scale-x-0 origin-bottom-right group-hover:scale-x-100 group-hover:origin-bottom-left transition-transform duration-500 ease-out"></span>
             </li>
           ))}
         </ul>
@@ -101,7 +136,6 @@ export function Navbar() {
           </span>
         )}
       </div>
-      {menuState && <div>{/* {navbar.} */}</div>}
     </nav>
   );
 }

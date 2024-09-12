@@ -148,7 +148,7 @@ const HeroSection = () => {
         </div>
         <div
           ref={ref}
-          className="relative min-[1200px]:w-[600px] max-[1200px]:w-[500px] max-[980px]:w-[400px] max-[700px]:w-[90%] max-[600px]:w-[90%] max-[700px]:mx-auto  h-[100%] z-10 "
+          className="relative min-[1200px]:w-[600px] max-[1200px]:w-[500px] max-[980px]:w-[400px] max-[700px]:w-[90%] max-[600px]:w-[90%] max-[700px]:mx-auto  h-[100%]"
         >
           <div className="relative z-[1] min-[1200px]:w-full max-[1200px]:w-[100%] max-[600px]:h-[450px] ml-auto h-full">
             <img

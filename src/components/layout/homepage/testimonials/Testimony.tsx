@@ -103,7 +103,7 @@ const Testimony = () => {
   return (
     <div className=" bg-fadedWhite h-[90vh]">
       <div className="flex flex-col items-center justify-between m-auto h-full">
-        <div className="flex items-center w-[85%] m-auto mb-4 justify-between ">
+        <div className="flex items-center w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
           <div>
             <HeaderTexts
               border={true}
@@ -115,7 +115,7 @@ const Testimony = () => {
             <Texts
               font="font-hkGrotesk"
               size="md"
-              className=" text-[#575555] mt-2 w-[300px] max-[400px]:w-[100%] max-[480px]:text-[14px]"
+              className=" text-[#575555] mt-2 w-[300px] max-[400px]:w-[90%] max-[480px]:text-[14px]"
               variant="body"
               color="primary"
             >
@@ -137,7 +137,7 @@ const Testimony = () => {
             </button>
           </div>
         </div>
-        <div className="w-[90%] max-[400px]:w-[95%] h-[70%] flex items-center justify-center ">
+        <div className="w-[90%] max-[400px]:w-[100%] h-[70%] flex items-center justify-center ">
           <AliceCarousel
             ref={carouselRef}
             mouseTracking
