@@ -21,7 +21,8 @@ const Testimony = () => {
     1300: { items: 3 },
   };
 
-  const createItems = ([handleClick]) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const createItems = ([handleClick]: any) => {
     let deltaX = 0;
     let difference = 0;
     const swipeDelta = 20;

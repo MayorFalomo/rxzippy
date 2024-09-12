@@ -2,7 +2,7 @@ import React from "react";
 import MappedFaq from "./MappedFaq";
 import { Faq } from "@/types/types";
 
-const AllFaqContainer = () => {
+const AllFaqContainer: React.FC = () => {
   const allFaqs: Faq[] = [
     {
       id: 1,

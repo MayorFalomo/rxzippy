@@ -14,7 +14,7 @@ type IMapped = {
   index: number;
 };
 
-const Technology = () => {
+const Technology: React.FC = () => {
   const FAQS: IProps[] = [
     {
       id: 1,

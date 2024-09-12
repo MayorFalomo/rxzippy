@@ -2,9 +2,7 @@ import HeaderTexts from "@/components/texts/HeaderTexts";
 import Texts from "@/components/texts/Texts";
 import React from "react";
 
-type Props = {};
-
-const History = (props: Props) => {
+const History: React.FC = () => {
   return (
     <div>
       <div>
@@ -19,9 +17,7 @@ const History = (props: Props) => {
           businesses, creating today's RxZippy.{" "}
         </Texts>
       </div>
-      <div>
-        <img src={} alt="img" />
-      </div>
+      <div></div>
     </div>
   );
 };
