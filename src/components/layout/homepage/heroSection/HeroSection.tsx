@@ -165,7 +165,7 @@ const HeroSection = () => {
           />
           <span className="absolute min-[700px]:left-[-40px] max-[700px]:right-[-20px] min-[700px]:top-[50px]  max-[700px]:top-[20px] bg-primary rounded-full h-[20px] w-[20px] max-[700px]:w-[15px] max-[700px]:h-[15px]"></span>
           <span className=" absolute min-[700px]:right-[-40px] max-[700px]:right-[70px] top-[-20px] bg-primary rounded-full h-[25px] w-[25px] max-[700px]:w-[15px] max-[700px]:h-[15px] "></span>
-          <span className=" absolute min-[700px]:right-[-30px] max-[700px]:right-[-20px] bottom-[-50px] bg-primary h-[70px] w-[70px] max-[700px]:w-[60px] max-[700px]:h-[60px] "></span>
+          <span className=" absolute z-[2] min-[700px]:right-[-30px] max-[700px]:right-[-20px] bottom-[-50px] bg-primary h-[70px] w-[70px] max-[700px]:w-[60px] max-[700px]:h-[60px] "></span>
         </div>
       </div>
       <BookNow />

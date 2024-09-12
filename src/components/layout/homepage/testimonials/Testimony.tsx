@@ -115,7 +115,7 @@ const Testimony = () => {
             <Texts
               font="font-hkGrotesk"
               size="md"
-              className=" text-[#575555] mt-2 w-[300px] max-[400px]:w-[90%] max-[480px]:text-[14px]"
+              className=" text-[#575555] mt-2 w-[300px] max-[400px]:w-[90%]  max-[480px]:text-[14px]"
               variant="body"
               color="primary"
             >
@@ -125,13 +125,13 @@ const Testimony = () => {
           <div className="flex items-center space-x-6">
             <button
               onClick={slidePrev}
-              className="rounded-full p-2 text-[28px] drop-shadow-md bg-black text-secondary"
+              className="rounded-full p-2 text-[28px] max-[480px]:text-[22px] drop-shadow-md bg-black text-secondary"
             >
               {<TiArrowLeft />}{" "}
             </button>
             <button
               onClick={slideNext}
-              className="rounded-full p-2 text-[28px] drop-shadow-md bg-bgPrimary text-primary"
+              className="rounded-full p-2 text-[28px] max-[480px]:text-[22px] drop-shadow-md bg-bgPrimary text-primary"
             >
               {<TiArrowRight />}{" "}
             </button>
