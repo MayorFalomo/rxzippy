@@ -51,49 +51,48 @@ export function Navbar() {
               className="z-30 list-none cursor-pointer group relative inline-block text-secondary font-normal"
               key={nav.path}
             >
-              <Popover>
-                <div
-                  className={`flex items-center gap-[20px] relative py-2 px-4 transition-colors duration-500 ${
-                    pathname.pathname === nav.path
-                      ? "text-golden_yellow"
-                      : "text-off-white hover:text-golden_yellow"
-                  }`}
-                >
-                  <PopoverTrigger>
-                    <Link to={nav.path}>{nav.navItem}</Link>
-                  </PopoverTrigger>
+              <div
+                className={`flex items-center gap-[20px] relative py-2 px-4 transition-colors duration-500 ${
+                  pathname.pathname === nav.path
+                    ? "text-golden_yellow"
+                    : "text-off-white hover:text-golden_yellow"
+                }`}
+              >
+                <Link to={nav.path}>{nav.navItem}</Link>
+                <Popover>
                   {nav.path === "/services" && (
-                    <span
-                      className="relative p-2 z-60"
-                      onClick={() => setShowPages(!showPages)}
-                    >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                    <PopoverTrigger className="p-0 m-0 border-2 border-red-400">
+                      <span
+                        className="relative p-2 z-60"
+                        onClick={() => setShowPages(!showPages)}
                       >
-                        <path
-                          d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    </span>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
+                    </PopoverTrigger>
                   )}
                   <PopoverContent>
-                    {showPages && nav.path === "/services" && (
-                      <p className="absolute bottom-[-80px] left-0 z-20 h-[60px] w-[120px] flex flex-col items-start justify-start px-2 text-offBlack bg-white">
+                    {
+                      <p className="flex flex-col items-start justify-start px-2 text-offBlack text-[18px] bg-white">
                         <Link to={nav.path}>services </Link>
-                        {/* <span className="bg-primary h-[1px] w-full"></span> */}
                         <Link to="/medical">medical </Link>
                       </p>
-                    )}
+                    }
                   </PopoverContent>
-                </div>
-              </Popover>
+                </Popover>
+              </div>
               <span className="absolute bottom-[2px] left-0 w-full h-[2px] bg-white scale-x-0 origin-bottom-right group-hover:scale-x-100 group-hover:origin-bottom-left transition-transform duration-500 ease-out"></span>
             </li>
           ))}
