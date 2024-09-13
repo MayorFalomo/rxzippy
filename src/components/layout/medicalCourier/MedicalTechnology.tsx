@@ -47,15 +47,37 @@ const MedicalTechnology: React.FC = () => {
     // triggerOnce: true,
   });
 
+  const [refImage, inViewImage] = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
   return (
     <div className=" mx-auto my-[50px] w-[85%] max-[600px]:w-[85%]">
       <div className="flex max-[870px]:flex-col items-center justify-between gap-[30px] mx-auto">
-        <div className=" relative w-[500px] max-[870px]:w-[400px]  max-[570px]:w-[90%] h-[500px]">
-          <img
-            className="w-full h-full object-cover object-left"
+        <div
+          ref={refImage}
+          className=" relative w-[500px] max-[870px]:w-[400px]  max-[570px]:w-[90%] h-[500px]"
+        >
+          <motion.img
+            initial={{
+              clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+            }}
+            animate={{
+              clipPath: inViewImage
+                ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+                : "polygon(0 0, 100% 0, 100% 0, 0 0)",
+            }}
+            exit={{
+              opacity: 0,
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={AIGirl}
             alt="img"
+            className="w-full h-full object-cover object-left"
           />
+
           <div className="flex items-start absolute left-[-40px] top-[-40px]">
             <span className="bg-primary  z-[1] h-[100px] w-[30px]"></span>
             <span className="bg-primary  z-[1] h-[30px] w-[100px]"></span>

@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, inView, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
