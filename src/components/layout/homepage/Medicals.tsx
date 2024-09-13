@@ -5,13 +5,18 @@ import Nurses from "../../../assets/nurses.webp";
 import nursesBg from "@/assets/nurses-bg.webp";
 import whiteBoxHead from "@/assets/boxHeadWhite.webp";
 import blackBoxHead from "@/assets/boxHeadBlack.webp";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Medicals = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.4,
+    // triggerOnce: true,
+  });
   return (
     <div className=" bg-offWhite">
       <div className="w-[85%] m-auto max-[480px]:w-[95%]">
         <div className=" flex justify-between items-end  gap-[20px] mt-[40px]">
-          <div className="mt-[40px] max-[620px]:w-full ">
+          <div ref={ref} className="mt-[40px] max-[620px]:w-full ">
             <HeaderTexts
               className=" w-[145px] leading-9 text-700 text-[30px] max-[620px]:text-[24px]  max-[620px]:w-full max-[620px]:text-center"
               primary={true}
@@ -19,9 +24,13 @@ const Medicals = () => {
               {" "}
               Our Medical Services{" "}
             </HeaderTexts>
-            <p className=" w-[70px] h-[2px] mt-1 bg-primary max-[620px]:hidden">
+            <motion.p
+              initial={{ width: 0 }}
+              animate={{ width: inView ? 70 : 0 }}
+              className="w-[70px] h-[2px] mt-1 bg-primary max-[620px]:hidden"
+            >
               {" "}
-            </p>
+            </motion.p>
           </div>
           <TrackYourPackageBtn styles="max-[620px]:hidden " />
         </div>

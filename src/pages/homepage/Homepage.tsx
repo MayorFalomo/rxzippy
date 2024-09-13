@@ -1,7 +1,7 @@
 import SubHero from "@/components/layout/homepage/subHero";
 import HeroSection from "../../components/layout/homepage/heroSection/HeroSection";
 import { Navbar } from "../../components/navbar/Navbar";
-import Benefits from "@/components/layout/homepage/Benefits";
+import Benefits from "@/components/layout/homepage/benefits/Benefits";
 import Testimony from "@/components/layout/homepage/testimonials/Testimony";
 import { Courier } from "@/components/layout/homepage/Courier";
 import Medicals from "@/components/layout/homepage/Medicals";

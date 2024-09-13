@@ -1,21 +1,33 @@
-import Texts from "@/components/texts/Texts";
 import boxes from "../../../assets/boxes.webp";
+import TextMask from "@/Animation/TextMask";
+import { useInView } from "react-intersection-observer";
 
 const AfforableService = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.4,
+    // triggerOnce: true,
+  });
+
   return (
     <div>
       <div className=" w-[85%] mx-auto my-[50px] flex max-[700px]:flex-col flex-row-reverse justify-between items-center gap-[40px]">
-        <div className=" flex flex-col gap-3 w-[500px] max-[700px]:w-full">
+        <div
+          ref={ref}
+          className=" flex flex-col gap-3 w-[500px] max-[700px]:w-full"
+        >
           <h1 className="flex flex-col gap-2 scroll-m-20 text-3xl txt-[#433E3E] font-semibold tracking-tight first:mt-0 font-hkGrotesk ">
             <span> Affordable prices </span>
             <span>(dedicated) </span>
           </h1>
-          <Texts className=" text-[#433E3E] font-normal font-hkGrotesk leading-7">
+          <TextMask
+            inView={inView}
+            customStyles=" text-[#433E3E] font-normal font-hkGrotesk leading-7"
+          >
             At RXZIPPY, we understand the importance of affordable shipping
             prices for small packages. That’s why we offer competitive rates for
             all our delivery services, so you can ship documents or materials
             without breaking the bank.
-          </Texts>
+          </TextMask>
         </div>
         <div className=" relative w-[600px] max-[700px]:w-full h-[400px]">
           <img

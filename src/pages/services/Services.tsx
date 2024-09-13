@@ -6,18 +6,21 @@ import ServiceDelivery from "@/components/layout/services/ServiceDelivery";
 import ServiceHero from "@/components/layout/services/ServiceHero";
 import Technology from "@/components/layout/services/Technology";
 import { Navbar } from "@/components/navbar/Navbar";
+import SmoothScroll from "@/Animation/SmoothScroll";
 
 const Services: React.FC = () => {
   return (
-    <div className=" overflow-x-hidden">
-      <Navbar />
-      <ServiceHero />
-      <ServiceAreas />
-      <Technology />
-      <ServiceDelivery />
-      <AfforableService />
-      <Footer showForm={false} />
-    </div>
+    <SmoothScroll>
+      <div className=" overflow-x-hidden">
+        <Navbar />
+        <ServiceHero />
+        <ServiceAreas />
+        <Technology />
+        <ServiceDelivery />
+        <AfforableService />
+        <Footer showForm={false} />
+      </div>
+    </SmoothScroll>
   );
 };
 

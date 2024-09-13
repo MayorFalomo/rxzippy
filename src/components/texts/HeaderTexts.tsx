@@ -17,7 +17,7 @@ const HeaderTexts = ({
     <h2
       className={` scroll-m-20 font-semibold tracking-tight first:mt-0 ${className} ${font} ${
         primary ? "font-stinger text-variant w-fit" : ""
-      } ${border ? "border-b-2 border-b-[#508CFF]" : ""} `}
+      } ${border ? "" : ""} `}
     >
       {children}{" "}
     </h2>

@@ -1,15 +1,32 @@
 import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import doctArms from "@/assets/doctArms.webp";
+import TextMask from "@/Animation/TextMask";
+import { useInView } from "react-intersection-observer";
 
 const BestFor = () => {
+  const Maps = ["Best for", "Doctor, hospitals", "Pharmacies"];
+
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+  });
+
   return (
     <div className="h-[70vh] max-[870px]:h-auto flex items-center my-[50px] max-[870px]:my-[80px]  justify-center">
       <div className="flex max-[870px]:flex-col-reverse items-center justify-between w-[85%] gap-[40px]">
-        <div className="flex flex-col gap-4">
+        <div ref={ref} className="flex flex-col gap-4">
+          <TextMask
+            inView={inView}
+            customStyles="flex flex-col text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight"
+          >
+            {Maps}
+          </TextMask>
           <h2 className="flex flex-col text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight">
-            <span>Best for:</span>
+            {/* {Maps.map((res, index) => (
+              <span key={index}>{res}</span>
+            ))} */}
+            {/* <span>Best for:</span>
             <span>Doctor, hospitals, </span>
-            <span>Pharmacies</span>
+            <span>Pharmacies</span> */}
           </h2>
           <div>
             <TrackYourPackageBtn />

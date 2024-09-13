@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, inView, motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
@@ -7,10 +7,10 @@ interface Props {
   inView?: boolean;
 }
 
-const FadeIn = ({ children, style, inView }: Props) => {
+const FadeInText = ({ children, style, inView }: Props) => {
   return (
     <AnimatePresence>
-      <motion.span
+      <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         exit={{ opacity: 0 }}
@@ -20,9 +20,9 @@ const FadeIn = ({ children, style, inView }: Props) => {
         className={`${style}`}
       >
         {children}
-      </motion.span>
+      </motion.p>
     </AnimatePresence>
   );
 };
 
-export default FadeIn;
+export default FadeInText;

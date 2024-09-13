@@ -9,6 +9,9 @@ import AliceCarousel from "react-alice-carousel";
 import type { EventObject } from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Testimonies } from ".";
+import FadeIn from "@/Animation/FadeIn";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Testimony = () => {
   const carouselRef = useRef<AliceCarousel | null>(null);
@@ -100,11 +103,26 @@ const Testimony = () => {
     );
   };
 
+  const [ref, inView] = useInView({
+    threshold: 0.4,
+    // triggerOnce: true,
+  });
+
+  const [refOne, inViewOne] = useInView({
+    threshold: 0.2,
+    // triggerOnce: true,
+  });
+
   return (
     <div className=" bg-fadedWhite h-[90vh]">
       <div className="flex flex-col items-center justify-between m-auto h-full">
         <div className="flex items-center w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
-          <div>
+          <div
+            ref={(el) => {
+              ref(el);
+              refOne(el);
+            }}
+          >
             <HeaderTexts
               border={true}
               className="w-[130px] text-[30px] max-[600px]:text-[24px]"
@@ -112,6 +130,13 @@ const Testimony = () => {
             >
               What Our Clients Say{" "}
             </HeaderTexts>
+            <motion.p
+              initial={{ width: 0 }}
+              animate={{ width: inView ? 240 : 0 }}
+              className="bg-primary h-[3px] w-[120px] transition-all ease-out duration-300"
+            >
+              {" "}
+            </motion.p>
             <Texts
               font="font-hkGrotesk"
               size="md"
@@ -119,7 +144,9 @@ const Testimony = () => {
               variant="body"
               color="primary"
             >
-              Hear from those who have experienced the Nettoyer difference:{" "}
+              <FadeIn inView={inViewOne}>
+                Hear from those who have experienced the Nettoyer difference:{" "}
+              </FadeIn>
             </Texts>
           </div>
           <div className="flex items-center space-x-6">
