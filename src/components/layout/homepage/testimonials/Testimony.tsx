@@ -1,7 +1,7 @@
 import HeaderTexts from "@/components/texts/HeaderTexts";
 import Texts from "@/components/texts/Texts";
 import { TiArrowLeft, TiArrowRight } from "react-icons/ti";
-
+import vanVector from "@/assets/vanVector.webp";
 import { Testimonials } from "@/types/types";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import { useRef, useState } from "react";
@@ -114,7 +114,13 @@ const Testimony = () => {
   });
 
   return (
-    <div className=" bg-fadedWhite h-[90vh]">
+    <div
+      style={{
+        backgroundImage: `url(${vanVector})`,
+        backgroundRepeat: "no-repeat",
+      }}
+      className=" bg-faded bg-center White h-[90vh]"
+    >
       <div className="flex flex-col items-center justify-between m-auto h-full">
         <div className="flex items-center w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
           <div

@@ -26,13 +26,10 @@ export const Courier: React.FC = () => {
             >
               <motion.img
                 className="w-full h-full object-cover rounded-[40px]"
-                // className="w-full h-full object-fill"
                 initial={{
                   clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
-                  // opacity: 0,
                 }}
                 animate={{
-                  // opacity: inView ? 1 : 0,
                   clipPath: inView
                     ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
                     : "polygon(0 0, 100% 0, 100% 0, 0 0)",
@@ -45,11 +42,7 @@ export const Courier: React.FC = () => {
                 src={parcel}
                 alt="img"
               />
-              {/* <img
-                className="w-full h-full object-cover rounded-[40px]"
-                src={parcel}
-                alt="img"
-              /> */}
+
               <div className=" absolute right-0 bottom-0 z-[2] flex justify-end items-end w-[100px] h-[150px] rounded-tl-[20px] bg-[#f1f1f1]">
                 <div className="w-[80px] h-[120px] bg-primary rounded-[15px]"></div>
               </div>

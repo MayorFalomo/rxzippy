@@ -27,6 +27,7 @@ const Medicals = () => {
             <motion.p
               initial={{ width: 0 }}
               animate={{ width: inView ? 70 : 0 }}
+              transition={{ duration: 0.7 }}
               className="w-[70px] h-[2px] mt-1 bg-primary max-[620px]:hidden"
             >
               {" "}

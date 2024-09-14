@@ -6,11 +6,7 @@ import { motion } from "framer-motion";
 import TextMask from "@/Animation/TextMask";
 import { useInView } from "react-intersection-observer";
 import FadeIn from "@/Animation/FadeIn";
-interface IProps {
-  id: number;
-  title: string;
-  description: string;
-}
+import { FAQS, IProps } from ".";
 
 type IMapped = {
   faq: IProps;
@@ -18,26 +14,6 @@ type IMapped = {
 };
 
 const MedicalTechnology: React.FC = () => {
-  const FAQS: IProps[] = [
-    {
-      id: 1,
-      title: "Real-Time Tracking",
-      description: "Our system allows you to track your progress in real-time.",
-    },
-    {
-      id: 2,
-      title: "Online order Submission",
-      description:
-        "Our system generates automated reports to help you stay on top of your work.",
-    },
-    {
-      id: 3,
-      title: "Direct Signatures",
-      description:
-        "Our system allows you to collect direct signatures from your team members.",
-    },
-  ];
-
   const [ref, inView] = useInView({
     threshold: 0.3,
   });

@@ -1,8 +1,11 @@
+import useRipple from "@/Animation/RippleEffect";
 import Texts from "@/components/texts/Texts";
 import { Button } from "@/ui/button";
 import { Input } from "@/ui/input";
 
 const Subcribe = () => {
+  const { buttonRef, createRipple } = useRipple();
+
   return (
     <div className="bg-white relative z-[2] flex flex-col justify-center h-[60vh]">
       <div className="relative bg-primary h-[80%] max-[750px]:h-[70%] w-[85%] max-[600px]:w-[95%] rounded-[30px] flex flex-col justify-center  items-center m-auto">
@@ -27,8 +30,10 @@ const Subcribe = () => {
                 placeholder="Email Address"
               />
               <Button
-                className="bg-black h-full w-[100px] text-white rounded-md"
+                ref={buttonRef}
+                className="relative overflow-hidden bg-black h-full w-[100px] text-white rounded-md"
                 type="submit"
+                onMouseDown={createRipple}
               >
                 Subscribe
               </Button>

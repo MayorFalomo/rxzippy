@@ -5,7 +5,12 @@ import { useInView } from "react-intersection-observer";
 const AfforableService = () => {
   const [ref, inView] = useInView({
     threshold: 0.4,
-    // triggerOnce: true,
+    triggerOnce: false,
+  });
+
+  const [refOne, inViewOne] = useInView({
+    threshold: 0.4,
+    triggerOnce: false,
   });
 
   return (
@@ -38,10 +43,13 @@ const AfforableService = () => {
           <span className=" absolute bottom-[-40px] min-[700px]:right-[-40px] max-[700px]:right-[-10px] bg-primary h-[90px] w-[84px]"></span>
         </div>
       </div>
-      <div className=" my-[100px]">
-        <h1 className="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl">
-          Enroll today!{" "}
-        </h1>
+      <div ref={refOne} className=" my-[100px]">
+        <TextMask
+          inView={inViewOne}
+          customStyles="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
+        >
+          Enroll today!
+        </TextMask>
       </div>
     </div>
   );
