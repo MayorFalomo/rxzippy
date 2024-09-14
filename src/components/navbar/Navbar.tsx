@@ -78,32 +78,36 @@ export function Navbar() {
                       </span>
                     </PopoverTrigger>
                   )}
-                  <PopoverContent className="min-[960px]:w-[100vw] max-w-[500px] bottom-[-70px]">
+                  <PopoverContent className="min-[960px]:w-[100vw] max-[960px]:max-w-[500px] bottom-[-70px]">
                     {
-                      <div className="flex flex-col items-start justify-start px-2 text-offBlack text-[18px] bg-white">
+                      <div className="flex flex-col items-start justify-start gap-[15px] px-2 text-offBlack text-[18px] bg-white">
                         <Link
-                          className="flex items-center justify-between shadow-md p-3 w-full  hover:bg-primary hover:text-white transition-all ease-out duration-500"
+                          className="flex items-center justify-between shadow-md p-4 w-full rounded-[10px]  hover:bg-primary hover:text-white transition-all ease-out duration-500"
                           to={nav.path}
                         >
                           <p className=" flex items-center gap-[20px]">
                             <span className="bg-primary text-white text-[18px] p-2 ">
-                              {<FaTruck style={{}} />}{" "}
+                              {<FaTruck />}{" "}
                             </span>
                             <span>Services </span>
                           </p>
-                          <span>{<ChevronRight />}</span>
+                          <span className="text-variant text-[20px]">
+                            {<ChevronRight />}
+                          </span>
                         </Link>
                         <Link
-                          className="flex items-center justify-between shadow-md p-3 w-full hover:bg-primary hover:text-white transition-all ease-out duration-500"
+                          className="flex items-center justify-between shadow-md p-4 w-full rounded-[10px] hover:bg-primary hover:text-white transition-all ease-out duration-500"
                           to="/medical"
                         >
                           <p className=" flex items-center gap-[20px]">
                             <span className="bg-primary text-white text-[18px] p-2 ">
-                              {<FaTruck style={{}} />}{" "}
+                              {<FaTruck />}{" "}
                             </span>
                             <span>Medical </span>
                           </p>
-                          <span>{<ChevronRight />}</span>
+                          <span className="text-variant text-[20px]">
+                            {<ChevronRight />}
+                          </span>
                         </Link>
                       </div>
                     }
