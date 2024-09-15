@@ -3,12 +3,20 @@ import womanWithHeadset from "@/assets/womanWithHeadset.webp";
 import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import rectOne from "@/assets/rectOne.webp";
 import rectTwo from "@/assets/rectTwo.webp";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const ContactHero: React.FC = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    // triggerOnce: true,
+  });
+
   return (
     <div>
       <div>
         <div
+          ref={ref}
           style={{
             backgroundImage: `url(${womanWithHeadset})`,
             backgroundRepeat: "no-repeat",
@@ -27,7 +35,12 @@ const ContactHero: React.FC = () => {
               <h2 className="scroll-m-20 font-semibold font-stinger tracking-wide text-[36px] text-white first:mt-0">
                 Contact Us{" "}
               </h2>
-              <span className=" w-[200px] h-[1px] bg-gray-400"></span>
+              <motion.span
+                initial={{ width: 0 }}
+                animate={{ width: inView ? 200 : 0 }}
+                transition={{ duration: 0.7 }}
+                className=" h-[1px] mt-1 w-[200px] bg-gray-400"
+              ></motion.span>
             </div>
             <div className=" max-[600px]:hidden">
               <TrackYourPackageBtn />

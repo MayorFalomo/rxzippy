@@ -5,6 +5,7 @@ import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import FadeIn from "@/Animation/FadeIn";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import vanVector from "@/assets/vanVector.webp";
 
 const CompanyHero: React.FC = () => {
   const [ref, inView] = useInView({
@@ -19,7 +20,13 @@ const CompanyHero: React.FC = () => {
 
   return (
     <div>
-      <div>
+      <div
+        style={{
+          backgroundImage: `url(${vanVector})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
         <div
           ref={ref}
           style={{

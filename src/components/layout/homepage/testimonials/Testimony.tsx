@@ -122,7 +122,7 @@ const Testimony = () => {
       className=" bg-faded bg-center White h-[90vh]"
     >
       <div className="flex flex-col items-center justify-between m-auto h-full">
-        <div className="flex items-center w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
+        <div className="flex items-center max-[350px]:items-end w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
           <div
             ref={(el) => {
               ref(el);
@@ -139,7 +139,7 @@ const Testimony = () => {
             <motion.p
               initial={{ width: 0 }}
               animate={{ width: inView ? 240 : 0 }}
-              className="bg-primary h-[3px] w-[120px] transition-all ease-out duration-300"
+              className="bg-primary h-[3px] w-[120px] max-[360px]:w-[80px] transition-all ease-out duration-300"
             >
               {" "}
             </motion.p>
