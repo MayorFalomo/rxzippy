@@ -89,7 +89,7 @@ export function Navbar() {
                             <span className="bg-primary text-white text-[18px] p-2 ">
                               {<FaTruck />}{" "}
                             </span>
-                            <span>Services </span>
+                            <span>Courier Services </span>
                           </p>
                           <span className="text-variant text-[20px]">
                             {<ChevronRight />}
@@ -103,7 +103,7 @@ export function Navbar() {
                             <span className="bg-primary text-white text-[18px] p-2 ">
                               {<FaTruck />}{" "}
                             </span>
-                            <span>Medical </span>
+                            <span>Medical Services</span>
                           </p>
                           <span className="text-variant text-[20px]">
                             {<ChevronRight />}

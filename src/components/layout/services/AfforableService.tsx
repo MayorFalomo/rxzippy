@@ -1,6 +1,7 @@
 import boxes from "../../../assets/boxes.webp";
 import TextMask from "@/Animation/TextMask";
 import { useInView } from "react-intersection-observer";
+import vanVector from "@/assets/vanVector.webp";
 
 const AfforableService = () => {
   const [ref, inView] = useInView({
@@ -34,7 +35,14 @@ const AfforableService = () => {
             without breaking the bank.
           </TextMask>
         </div>
-        <div className=" relative w-[600px] max-[700px]:w-full h-[400px]">
+        <div
+          style={{
+            backgroundImage: `url(${vanVector})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+          className=" relative w-[600px] max-[700px]:w-full h-[400px]"
+        >
           <img
             className="w-full h-full object-cover rounded-[30px]"
             src={boxes}
@@ -48,7 +56,7 @@ const AfforableService = () => {
           inView={inViewOne}
           customStyles="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
         >
-          Enroll today!
+          Contact us!
         </TextMask>
       </div>
     </div>

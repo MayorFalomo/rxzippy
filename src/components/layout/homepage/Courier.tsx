@@ -1,4 +1,3 @@
-import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import HeaderTexts from "@/components/texts/HeaderTexts";
 import React from "react";
 import parcel from "../../../assets/parcel.webp";
@@ -62,7 +61,6 @@ export const Courier: React.FC = () => {
                 <li> Fast and secure delivery (dedicated)</li>
                 <li>Affordable prices (dedicated) </li>
               </ul>
-              <TrackYourPackageBtn />
             </div>
           </div>
         </div>

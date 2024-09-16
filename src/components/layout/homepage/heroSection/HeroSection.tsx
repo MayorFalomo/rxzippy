@@ -1,5 +1,4 @@
 import Texts from "../../../texts/Texts";
-import BookNow from "../BookNow";
 import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import heroImage from "../../../../assets/heroImage.webp";
 import vanVector from "@/assets/vanVector.webp";
@@ -168,7 +167,7 @@ const HeroSection = () => {
           <span className=" absolute z-[2] min-[700px]:right-[-30px] max-[700px]:right-[-20px] bottom-[-50px] bg-primary h-[70px] w-[70px] max-[700px]:w-[60px] max-[700px]:h-[60px] "></span>
         </div>
       </div>
-      <BookNow />
+      {/* <BookNow /> */}
     </div>
   );
 };

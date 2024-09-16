@@ -1,12 +1,10 @@
-import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import doctArms from "@/assets/doctArms.webp";
 import TextMask from "@/Animation/TextMask";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 const BestFor = () => {
-  const Maps = ["Best for", "Doctor, hospitals", "Pharmacies"];
-
+  const Maps = ["Best for", "Pharmacies, Physicians", "Hospitals, Doctors"];
   const [ref, inView] = useInView({
     threshold: 0.3,
   });
@@ -40,9 +38,9 @@ const BestFor = () => {
             <span>Doctor, hospitals, </span>
             <span>Pharmacies</span> */}
           </h2>
-          <div>
+          {/* <div>
             <TrackYourPackageBtn />
-          </div>
+          </div> */}
         </div>
         <div className="relative max-[1024px]:w-[400px] min-w-[400px] max-[570px]:w-[90%] max-[570px]:min-w-0">
           <motion.img

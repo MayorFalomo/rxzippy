@@ -1,6 +1,5 @@
 import Texts from "@/components/texts/Texts";
 import React from "react";
-import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { benefits } from ".";
@@ -96,7 +95,6 @@ const Benefits: React.FC = () => {
           ))}
         </div>
       </div>
-      <TrackYourPackageBtn styles="mx-auto my-[30px]" />
     </div>
   );
 };

@@ -92,7 +92,7 @@ const MedicalTechnology: React.FC = () => {
           inView={inView}
           customStyles="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
         >
-          Enroll today!
+          Contact us!
         </TextMask>
         {/* <h1 className="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl">
         </h1> */}

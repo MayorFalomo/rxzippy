@@ -1,13 +1,12 @@
-import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import { GiDeliveryDrone } from "react-icons/gi";
 import manWriting from "../../../assets/man-writing.webp";
 
 const ServiceAreas = () => {
   return (
     <div>
-      <div className="my-[30px] flex justify-center mx-auto">
+      {/* <div className="my-[30px] flex justify-center mx-auto">
         <TrackYourPackageBtn />
-      </div>
+      </div> */}
       <div className="flex max-[760px]:flex-col-reverse items-center justify-between gap-3 mx-auto w-[85%] max-[840px]:w-[90%] my-[50px] ">
         <div className="flex flex-col  max-[780px]:my-[20px] gap-4">
           <ul className="flex flex-col my-[20px] gap-5">
@@ -46,9 +45,9 @@ const ServiceAreas = () => {
               </span>{" "}
             </li>
           </ul>
-          <div className="">
+          {/* <div className="">
             <TrackYourPackageBtn />
-          </div>
+          </div> */}
         </div>
         <div className=" relative w-[500px] h-[400px] max-[630px]:w-full">
           <img
