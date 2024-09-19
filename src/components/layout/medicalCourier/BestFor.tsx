@@ -2,6 +2,7 @@ import doctArms from "@/assets/doctArms.webp";
 import TextMask from "@/Animation/TextMask";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { FaUserDoctor } from "react-icons/fa6";
 
 const BestFor = () => {
   const Maps = ["Best for", "Pharmacies, Physicians", "Hospitals, Doctors"];
@@ -22,22 +23,28 @@ const BestFor = () => {
             ref(el);
             refImage(el);
           }}
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-4 "
         >
-          <TextMask
-            inView={inView}
-            customStyles="flex flex-col text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight"
-          >
-            {Maps}
-          </TextMask>
-          <h2 className="flex flex-col text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight">
-            {/* {Maps.map((res, index) => (
+          <div className="flex flex-col gap-4  ">
+            <h2 className="block text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight">
+              Best For{" "}
+            </h2>
+            <TextMask
+              inView={inView}
+              customStyles="flex w-full text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight"
+            >
+              <span>{<FaUserDoctor />} </span>
+              <span>Physicians </span>
+            </TextMask>
+            <h2 className="flex flex-col text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight">
+              {/* {Maps.map((res, index) => (
               <span key={index}>{res}</span>
             ))} */}
-            {/* <span>Best for:</span>
+              {/* <span>Best for:</span>
             <span>Doctor, hospitals, </span>
             <span>Pharmacies</span> */}
-          </h2>
+            </h2>
+          </div>
           {/* <div>
             <TrackYourPackageBtn />
           </div> */}

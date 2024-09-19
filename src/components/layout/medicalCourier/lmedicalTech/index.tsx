@@ -22,4 +22,10 @@ export const FAQS: IProps[] = [
     description:
       "Our system allows you to collect direct signatures from your team members.",
   },
+  {
+    id: 4,
+    title: "Refrigeration Services",
+    description:
+      "We offer refrigeration services for packages that are temperature controlled",
+  },
 ];

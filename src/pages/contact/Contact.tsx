@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
       <Navbar />
       <ContactHero />
       <ContactUs />
-      <Footer givePadding={true} />
+      <Footer givePadding={true} showForm={true} />
     </div>
   );
 };

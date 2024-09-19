@@ -34,9 +34,10 @@ const CompanyHero: React.FC = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="  mx-auto my-[40px] relative w-[70%] max-[800px]:w-[90%] h-[50vh] max-[500px]:bg-center "
+          className=" relative mx-auto my-[40px] w-[70%] max-[800px]:w-[90%] h-[50vh] max-[500px]:bg-center "
         >
-          <h1 className="flex flex-col gap-[1px] items-start justify-center h-full w-[70%] max-[500px]:w-[85%] m-auto text-white text-[60px] max-[900px]:text-[50px] max-[700px]:text-[40px] leading-[70px] max-[600px]:leading-[50px] font-stinger scroll-m-20 font-bold tracking-wide">
+          <div className=" bg-black opacity-[0.6] h-full w-full"></div>
+          <h1 className=" absolute left-[10%] top-1/2 -translate-y-1/2 z-[1] flex flex-col gap-[1px] items-start justify-center h-full w-[70%] max-[500px]:w-[85%] m-auto text-white text-[60px] max-[900px]:text-[50px] max-[700px]:text-[40px] leading-[70px] max-[600px]:leading-[50px] font-stinger scroll-m-20 font-bold tracking-wide">
             <span>About RXZippy </span>
             <span>Delivery</span>
             <motion.span

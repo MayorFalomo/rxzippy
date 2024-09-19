@@ -114,7 +114,7 @@ const Footer = ({ showForm, givePadding }: IProps) => {
                 <ContactForm />
               </div>
             </div>
-            <div className=" w-[45%] max-[750px]:w-[80%] flex items-center">
+            <div className=" w-[45%] max-[750px]:w-[80%] flex flex-col items-start gap-[40px] justify-between">
               <div className=" flex flex-col gap-4 h-full ">
                 <h2 className=" flex items-center gap-2 font-hkGrotesk">
                   <span className="scroll-m-20 text-[30px] max-[930px]:text-[28px] font-semibold tracking-wide first:mt-0 max-[840px]:mx-auto">
@@ -167,6 +167,19 @@ const Footer = ({ showForm, givePadding }: IProps) => {
                   </span>
                 </ul>
               </div>
+              <Texts className=" flex items-center gap-2 font-inter">
+                <span>Email : </span>
+                <span className=" underline underline-offset-2">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="mailto:sales@rxzippy.com"
+                  >
+                    {" "}
+                    sales@rxzippy.com
+                  </a>{" "}
+                </span>{" "}
+              </Texts>
             </div>
           </div>
         ) : (
