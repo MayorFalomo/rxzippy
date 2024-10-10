@@ -12,7 +12,7 @@ const Privacy: React.FC = () => {
     <div>
       <div ref={ref} className=" min-[1800px]:w-[1500px] mx-auto w-[80%] max-[500px]:w-[90%] mt-[80px]">
         <section >
-          <p className=" min-[1800px]:text-md max-[1800px]:text-sm font-montserrat leading-7">
+          <p className="[&:not(:first-child)]:mt-6 font-montserrat text-offGray leading-7">
             RxZippy Ltd, having its registered office at the United states of America, (“Rxzippy” or “We”) would like to be transparent when
             it comes to processing of personal data and privacy of our customers, website
             visitors, and every individual (“You”) whose personal data and information are
@@ -22,7 +22,7 @@ const Privacy: React.FC = () => {
             Privacy Policy with the sole purpose of informing You about following the
             topics:{' '}
           </p>
-          <ul className="flex flex-col gap-[20px] mt-[40px] mb-[50px] font-montserrat list-disc list-inside text-lg">
+          <ul className="flex flex-col gap-[20px] mt-[40px] mb-[50px] text-offGray font-montserrat list-disc list-inside text-lg">
             <li className="">Processing of Personal Data </li>
             <li>General Rules </li>
             <li>Data Confidentiality </li>
@@ -48,19 +48,19 @@ const Privacy: React.FC = () => {
               className=" h-[1px] mt-2 w-[300px]max-[400px]:w-[100px] bg-primary"
             ></motion.span>
           </h3>
-          <p className="leading-7 [&:not(:first-child)]:mt-6 font-montserrat ">
+          <p className="leading-7 text-offGray [&:not(:first-child)]:mt-6 font-montserrat ">
             All services incorporated in this website and other websites under the control
             of Rxzippy are governed by this Privacy Policy, including those which are
             governed by specific Terms of Use with data processing rules.{' '}
           </p>
           <br />
-          <p className="leading-7 [&:not(:first-child)]:mt-6 font-montserrat">
+          <p className="leading-7 [&:not(:first-child)]:mt-6 text-offGray font-montserrat">
             Generally, You may use our websites for information purposes without giving
             personal information and informing Rxzippy who you are. On the other hand,
             some of our services need to collect more information:{' '}
           </p>
           <br />
-          <ul className="flex flex-col gap-[20px] mb-[50px] font-montserrat list-disc list-inside max-[1800px]:text-md">
+          <ul className="flex flex-col gap-[20px] mb-[50px] font-montserrat text-offGray list-disc list-inside max-[1800px]:text-md">
             <li>
               Rxzippy may collect personal information for the purposes of direct
               communication with You in order to respond to your questions, and fulfill
@@ -124,15 +124,15 @@ const Privacy: React.FC = () => {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+          <h3 className="scroll-m-20 text-2xl text-offGray font-semibold tracking-tight">
             General Rules{' '}
           </h3>
-          <p className="leading-7 [&:not(:first-child)]:mt-6 font-montserrat ">
+          <p className="leading-7 text-offGray [&:not(:first-child)]:mt-6 font-montserrat ">
             There are only a few legal bases for data processing which We use according to
             the GDPR and POPI legislative frameworks. Our activities are mainly covered by
           </p>
           <br />
-          <ul className="flex flex-col gap-[20px] mb-[30px] font-montserrat list-disc list-inside max-[1800px]:text-md">
+          <ul className="flex flex-col gap-[20px] mb-[30px] font-montserrat text-offGray list-disc list-inside max-[1800px]:text-md">
             <li>
               Contractual necessity legal base is applicable when it comes to our products
               and services provided under End User License Agreements or Terms of Use.
@@ -151,7 +151,7 @@ const Privacy: React.FC = () => {
               electronic communication, invoicing or billing.
             </li>
           </ul>
-          <p className="leading-7 [&:not(:first-child)]:mt-6 font-montserrat ">
+          <p className="leading-7 text-offGray [&:not(:first-child)]:mt-6 font-montserrat ">
             The goal of this Privacy Policy is to provide a general overview of legal
             basis and data processing principles of Rxzippy. If You are looking for more
             information concerning data collection facilitated by a particular Rxzippy
@@ -163,7 +163,7 @@ const Privacy: React.FC = () => {
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
             Data Confidentiality{' '}
           </h3>
-          <p className="leading-7 [&:not(:first-child)]:mt-6 font-montserrat ">
+          <p className="leading-7 text-offGray [&:not(:first-child)]:mt-6 font-montserrat ">
             Rxzippy is a company operating worldwide. Based on your location and service
             You choose to use, Rxzippy might be required to transfer your data to a
             country that is not covered by GDPR or POPI. Even in such cases, every
