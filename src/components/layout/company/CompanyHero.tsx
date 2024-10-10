@@ -10,12 +10,10 @@ import vanVector from "@/assets/vanVector.webp";
 const CompanyHero: React.FC = () => {
   const [ref, inView] = useInView({
     threshold: 0.4,
-    // triggerOnce: true,
   });
 
   const [refOne, inViewOne] = useInView({
     threshold: 0.2,
-    // triggerOnce: true,
   });
 
   return (
@@ -34,7 +32,7 @@ const CompanyHero: React.FC = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className=" relative mx-auto my-[40px] w-[70%] max-[800px]:w-[90%] h-[50vh] max-[500px]:bg-center "
+          className=" relative mx-auto my-[40px] min-[1800px]:w-[1500px] w-[70%] max-[800px]:w-[90%] h-[50vh] max-[500px]:bg-center "
         >
           <div className=" bg-black opacity-[0.6] h-full w-full"></div>
           <h1 className=" absolute left-[10%] top-1/2 -translate-y-1/2 z-[1] flex flex-col gap-[1px] items-start justify-center h-full w-[70%] max-[500px]:w-[85%] m-auto text-white text-[60px] max-[900px]:text-[50px] max-[700px]:text-[40px] leading-[70px] max-[600px]:leading-[50px] font-stinger scroll-m-20 font-bold tracking-wide">
@@ -50,9 +48,9 @@ const CompanyHero: React.FC = () => {
         </div>
         <div
           ref={refOne}
-          className=" my-[50px] mx-auto w-[70%] max-[800px]:w-[90%]"
+          className=" my-[50px] mx-auto min-[1800px]:w-[1500px] w-[70%] max-[800px]:w-[90%]"
         >
-          <Texts className=" text-offGray leading-7" size="md">
+          <Texts className="text-offGray font-montserrat leading-7" size="md">
             <FadeIn inView={inViewOne}>
               RxZippy is a company founded in Atlanta, GA, with its primary
               purpose of delivering medical supplies across a significant part

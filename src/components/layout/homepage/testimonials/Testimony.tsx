@@ -68,7 +68,7 @@ const Testimony = () => {
             {testimonial.header}{" "}
           </HeaderTexts>
           <Texts size="sm">{testimonial.textsOne} </Texts>
-          <Texts className="mt-[10px]" size="sm">
+          <Texts className="mt-[10px] text-[#3C3737]" size="sm">
             {testimonial.textsTwo}{" "}
           </Texts>
         </div>
@@ -119,10 +119,10 @@ const Testimony = () => {
         backgroundImage: `url(${vanVector})`,
         backgroundRepeat: "no-repeat",
       }}
-      className=" bg-faded bg-center White h-[90vh]"
+      className=" bg-faded bg-center bg-white min-[1800px]:h-[70vh] h-[90vh]"
     >
       <div className="flex flex-col items-center justify-between m-auto h-full">
-        <div className="flex items-center max-[350px]:items-end w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
+        <div className="flex items-center max-[350px]:items-end min-[1800px]:w-[1500px] w-[85%] max-[500px]:w-[95%] m-auto mb-4 justify-between ">
           <div
             ref={(el) => {
               ref(el);
@@ -170,7 +170,7 @@ const Testimony = () => {
             </button>
           </div>
         </div>
-        <div className="w-[90%] max-[400px]:w-[100%] h-[70%] flex items-center justify-center ">
+        <div className="min-[1800px]:w-[1500px] w-[90%] max-[400px]:w-[100%] h-[70%] flex items-center justify-center ">
           <AliceCarousel
             ref={carouselRef}
             mouseTracking

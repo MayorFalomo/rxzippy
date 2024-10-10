@@ -30,7 +30,7 @@ const ContactHero: React.FC = () => {
             src={rectTwo}
             alt="img"
           />
-          <div className="absolute left-[10%] top-1/2 z-20 flex justify-between items-end w-[80%] m-auto  ">
+          <div className="absolute min-[1800px]:left-[19%] left-[10%] top-1/2 z-20 flex justify-between items-end min-[1800px]:w-[1500px] w-[80%] m-auto  ">
             <div className=" flex flex-col gap-[10px]">
               <h2 className="scroll-m-20 font-semibold font-stinger tracking-wide text-[36px] text-white first:mt-0">
                 Contact Us{" "}

@@ -19,8 +19,8 @@ const BestFor = () => {
   });
 
   return (
-    <div className="h-[80vh] max-[870px]:h-auto flex items-center my-[50px] max-[870px]:my-[80px]  justify-center">
-      <div className="flex max-[870px]:flex-col-reverse items-center justify-between w-[85%] gap-[40px]">
+    <div className="min-[1800px]:h-[60vh] h-[80vh] max-[870px]:h-auto flex items-center my-[50px] max-[870px]:my-[80px]  justify-center">
+      <div className="flex max-[870px]:flex-col-reverse items-center justify-between min-[1800px]:w-[1500px] w-[85%] gap-[40px]">
         <div
           ref={(el) => {
             ref(el);
@@ -30,7 +30,7 @@ const BestFor = () => {
         >
           <div className="flex flex-col gap-4 ">
 
-            <h2 className="block text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-hkGrotesk scroll-m-20 font-medium tracking-tight">
+            <h2 className="block text-offGray text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] font-tenorSans scroll-m-20 font-medium tracking-tight">
               Best For{" "}
             </h2>
             <FadeIn inView={inView} >
@@ -38,12 +38,12 @@ const BestFor = () => {
             <div  className="flex items-center gap-3 text-offGray"
             >
               <span className=" bg-primary text-white p-3 max-[700px]:p-2 rounded-full text-[22px] max-[700px]:text-[35px] max-[480px]:text-[20px]" >{<FaBriefcaseMedical />} </span>
-              <p className=" w-full text-offGray  min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-hkGrotesk scroll-m-20 font-medium tracking-tight" >Pharmacies </p>
+              <p className=" w-full text-offGray  min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-montserrat scroll-m-20 font-medium tracking-tight" >Pharmacies </p>
             </div>
             <div  className="flex items-center gap-3 text-offGray"
             >
               <span className=" bg-primary text-white p-3 max-[700px]:p-2 rounded-full text-[22px] max-[700px]:text-[35px] max-[480px]:text-[20px]" >{<PiHospital />} </span>
-              <p className=" w-full text-offGray  min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-hkGrotesk scroll-m-20 font-medium tracking-tight" >Hospitals </p>
+              <p className=" w-full text-offGray  min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-montserrat scroll-m-20 font-medium tracking-tight" >Hospitals </p>
               </div>
               </div>
             </FadeIn>
@@ -52,12 +52,12 @@ const BestFor = () => {
             <div  className="flex items-center gap-3 text-offGray"
             >
               <span className=" bg-primary text-white p-3 max-[700px]:p-2 rounded-full text-[22px] max-[700px]:text-[35px] max-[480px]:text-[20px]" >{<ImLab />} </span>
-              <p className=" w-full text-offGray min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-hkGrotesk scroll-m-20 font-medium tracking-tight" >Labs </p>
+              <p className=" w-full text-offGray min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-montserrat scroll-m-20 font-medium tracking-tight" >Labs </p>
             </div>
             <div  className="flex items-center gap-3 text-offGray"
             >
               <span className=" bg-primary text-white p-3 max-[700px]:p-2 rounded-full text-[22px] max-[700px]:text-[35px] max-[480px]:text-[20px]" >{<FaUserDoctor />} </span>
-              <p className=" w-full text-offGray  min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-hkGrotesk scroll-m-20 font-medium tracking-tight" >Physician </p>
+              <p className=" w-full text-offGray  min-[700px]:text-[30px] max-[700px]:text-[25px] max-[480px]:text-[20px] font-montserrat scroll-m-20 font-medium tracking-tight" >Physician </p>
                 </div>
                 
               </div>

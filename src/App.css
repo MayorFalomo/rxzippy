@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    border: 3px red solid;
-}
 @font-face {
   font-family: 'Roboto';
   src: url('/fonts/stinger/roboto/Roboto-Regular.woff2') format('woff2'),

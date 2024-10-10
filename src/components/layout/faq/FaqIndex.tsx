@@ -8,17 +8,17 @@ export const allFaqs: Faq[] = [
   },
   {
     id: 2,
-    question: "How do i track my delivery?",
+    question: "How do I track my delivery?",
     answer: "You can track your delivery through our website.",
   },
   {
     id: 3,
-    question: "What ae your delivery hours?",
+    question: "What are your delivery hours?",
     answer: "Our delivery hours are suitable for all hours of delivery",
   },
   {
     id: 4,
-    question: "What should i do if my package is damaged or lost?",
+    question: "What should I do if my package is damaged or lost?",
     answer: "Please contact us immediately so we can assist you",
   },
   {
@@ -28,7 +28,7 @@ export const allFaqs: Faq[] = [
   },
   {
     id: 6,
-    question: "How do i become a courier with RXZippy?",
+    question: "How do I become a courier with RXZippy?",
     answer: "Please contact us via email or phone number",
   },
 ];

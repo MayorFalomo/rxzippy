@@ -16,18 +16,18 @@ const AfforableService = () => {
 
   return (
     <div>
-      <div className=" w-[85%] mx-auto my-[50px] flex max-[700px]:flex-col flex-row-reverse justify-between items-center gap-[40px]">
+      <div className="min-[1800px]:w-[1500px] w-[85%] mx-auto my-[50px] flex max-[700px]:flex-col flex-row-reverse justify-between items-center gap-[40px]">
         <div
           ref={ref}
           className=" flex flex-col gap-3 w-[500px] max-[700px]:w-full"
         >
-          <h1 className="flex flex-col gap-2 scroll-m-20 text-3xl txt-[#433E3E] font-semibold tracking-tight first:mt-0 font-hkGrotesk ">
+          <h1 className="flex flex-col gap-2 scroll-m-20 text-3xl text-[#433E3E] font-semibold tracking-tight first:mt-0 font-tenorSans">
             <span> Affordable prices </span>
             <span>(dedicated) </span>
           </h1>
           <TextMask
             inView={inView}
-            customStyles=" text-[#433E3E] font-normal font-hkGrotesk leading-7"
+            customStyles=" text-[#433E3E] font-normal font-montserrat leading-7"
           >
             At RXZIPPY, we understand the importance of affordable shipping
             prices for small packages. That’s why we offer competitive rates for
@@ -54,7 +54,7 @@ const AfforableService = () => {
       <div ref={refOne} className=" my-[100px]">
         <TextMask
           inView={inViewOne}
-          customStyles="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
+          customStyles="scroll-m-20 text-center font-tensorSans text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
         >
           Contact us!
         </TextMask>

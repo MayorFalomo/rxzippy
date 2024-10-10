@@ -14,10 +14,10 @@ export const Courier: React.FC = () => {
         backgroundImage: `url(${vanVector})`,
         backgroundRepeat: "no-repeat",
       }}
-      className="bg-white flex flex-col items-center justify-center  bg-left max-[900px]:bg-top h-[90vh] max-[900px]:h-auto"
+      className="bg-white flex flex-col items-center justify-center min-[1800px]:bg-center bg-left max-[900px]:bg-top h-[90vh] max-[900px]:h-auto"
     >
       <div className=" w-full ">
-        <div className="w-[85%] max-[600px]:w-[95%] m-auto">
+        <div className="min-[1800px]:w-[1500px] w-[85%] max-[600px]:w-[95%] m-auto">
           <div className="flex max-[900px]:flex-col items-center justify-between space-x-6 gap-4 max-[900px]:gap-6">
             <div
               ref={ref}

@@ -8,7 +8,7 @@ const Subcribe = () => {
 
   return (
     <div className="bg-white relative z-[2] flex flex-col justify-center h-[60vh]">
-      <div className="relative bg-primary h-[80%] max-[750px]:h-[70%] w-[85%] max-[600px]:w-[95%] rounded-[30px] flex flex-col justify-center  items-center m-auto">
+      <div className="relative bg-primary h-[80%] max-[750px]:h-[70%] min-[1800px]:w-[1500px] max-[1800px]:w-[85%] max-[600px]:w-[95%] rounded-[30px] flex flex-col justify-center  items-center m-auto">
         <div className=" flex flex-col items-center justify-between h-[70%] max-[750px]:h-[60%] ">
           <div className="flex flex-col items-center justify-center ">
             <Texts

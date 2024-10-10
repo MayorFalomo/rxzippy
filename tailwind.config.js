@@ -26,6 +26,8 @@ export default {
         clashDisplay: ["clashDisplay", "sans serif"],
         lato: ["lato", "sans serif"],
         poppins: ["Poppins", "sans serif"],
+        tenorSans: ["TenorSans", "sans serif"],
+        montserrat: ["Montserrat", "sans serif"]
       },
       colors: {
         primary: "#000",
