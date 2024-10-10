@@ -4,12 +4,10 @@ import manWriting from "../../../assets/man-writing.webp";
 const ServiceAreas = () => {
   return (
     <div>
-      {/* <div className="my-[30px] flex justify-center mx-auto">
-        <TrackYourPackageBtn />
-      </div> */}
-      <div className="flex max-[760px]:flex-col-reverse items-center justify-between gap-3 mx-auto w-[85%] max-[840px]:w-[90%] my-[50px] ">
+     
+      <div className="flex max-[760px]:flex-col-reverse items-center justify-between gap-3 mx-auto min-[1800px]:w-[1500px] w-[85%] max-[840px]:w-[90%] my-[50px] ">
         <div className="flex flex-col  max-[780px]:my-[20px] gap-4">
-          <ul className="flex flex-col my-[20px] gap-5">
+          <ul className="flex flex-col my-[20px] gap-5 font-tenorSans">
             <li className="flex items-center gap-3">
               <p className="flex items-center gap-2">
                 <span className=" p-2 bg-primary text-white rounded-full">

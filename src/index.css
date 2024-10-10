@@ -35,6 +35,18 @@ img{
 }
 
 @font-face {
+  font-family: 'TenorSans';
+  src: url('/public/fonts/TenorSans.ttf') format('woff2'),
+  url('/public/fonts/TenorSans.ttf') format('woff2')
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/public/fonts/montserrrat/Montserrat-Medium.ttf') format('woff2'),
+  url('/public/fonts/montserrrat/Montserrat-Medium.ttf') format('woff2')
+}
+
+@font-face {
   font-family: 'HkGrotesk';
   src: url('/fonts/hkGrotesk/hkGroteskMedium.ttf') format('woff2'), 
   url('/fonts/hkGrotesk/hkGroteskRegular.ttf') format('woff2');

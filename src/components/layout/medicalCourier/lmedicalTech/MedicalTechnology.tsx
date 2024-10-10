@@ -3,10 +3,10 @@ import AIGirl from "@/assets/gorgeousGirl.webp";
 import Texts from "@/components/texts/Texts";
 import { MinusIcon, PlusIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
-import TextMask from "@/Animation/TextMask";
 import { useInView } from "react-intersection-observer";
 import FadeIn from "@/Animation/FadeIn";
 import { FAQS, IProps } from ".";
+import { Link } from "react-router-dom";
 
 type IMapped = {
   faq: IProps;
@@ -14,13 +14,12 @@ type IMapped = {
 };
 
 const MedicalTechnology: React.FC = () => {
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     threshold: 0.3,
   });
 
   const [refOne, inViewOne] = useInView({
     threshold: 0.2,
-    // triggerOnce: true,
   });
 
   const [refImage, inViewImage] = useInView({
@@ -29,7 +28,7 @@ const MedicalTechnology: React.FC = () => {
   });
 
   return (
-    <div className=" mx-auto my-[50px] w-[85%] max-[600px]:w-[85%]">
+    <div className=" mx-auto my-[50px] min-[1800px]:w-[1500px] w-[85%] max-[600px]:w-[85%]">
       <div className="flex max-[870px]:flex-col items-center justify-between gap-[30px] mx-auto">
         <div
           ref={refImage}
@@ -67,12 +66,12 @@ const MedicalTechnology: React.FC = () => {
           ref={refOne}
           className="flex flex-col gap-3 w-[500px] max-[570px]:w-full"
         >
-          <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 font-hkGrotesk">
+          <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 font-tenorSans">
             Technology{" "}
           </h2>
           <FadeIn
             inView={inViewOne}
-            style=" text-black font-hkGrotesk leading-7"
+            style=" text-black font-montserrat leading-7"
           >
             Utilizing the latest technology is one of the many things that sets
             RXZIPPY apart from other big-name logistics companies. Some of the
@@ -87,15 +86,13 @@ const MedicalTechnology: React.FC = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className=" my-[100px]">
-        <TextMask
-          inView={inView}
-          customStyles="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
-        >
+      <div ref={ref} className="flex justify-center my-[100px]">
+       
+          <Link to='/contact' ><button className="scroll-m-20 text-center border-2 border-[#508CFF] bg-transparent px-6 py-3 hover:bg-[#508CFF] hover:text-white transition duration-700 ease-out rounded-[10px] font-montserrat text-[#433E3E] text-[20px] font-medium tracking-wide lg:text-[24px]">
+
           Contact us!
-        </TextMask>
-        {/* <h1 className="scroll-m-20 text-center font-hkGrotesk text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl">
-        </h1> */}
+          </button></Link>
+       
       </div>
     </div>
   );
@@ -116,7 +113,7 @@ const Faq = ({ faq, index }: IMapped) => {
           {isOpen ? <MinusIcon /> : <PlusIcon />}
         </span>
         <div className="flex flex-col gap-2">
-          <h3 className="mt-[3px]">{faq.title}</h3>
+          <h3 className="mt-[3px] font-tenorSans">{faq.title}</h3>
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{
@@ -126,7 +123,7 @@ const Faq = ({ faq, index }: IMapped) => {
             transition={{ ease: "easeOut" }}
             className="overflow-hidden "
           >
-            <Texts className="w-full">{faq.description}</Texts>
+            <Texts className="w-full font-montserrat">{faq.description}</Texts>
           </motion.div>
         </div>
       </div>

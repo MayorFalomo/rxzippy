@@ -21,14 +21,13 @@ const TrackYourPackageBtn = ({
 
   const { ref, inView } = useInView({
     threshold: 0,
-    // triggerOnce: true,
   });
 
   return (
     <button
       ref={(el) => {
-        ref(el); // useInView ref
-        buttonRef.current = el; // button ref for ripple effect
+        ref(el);
+        buttonRef.current = el;
       }}
       onMouseDown={createRipple}
       onClick={() => {
@@ -37,7 +36,7 @@ const TrackYourPackageBtn = ({
         }
       }}
       style={{ position: "relative", overflow: "hidden" }}
-      className={`${font} ${styles} relative z-[2] flex items-center gap-2 px-4 py-2 text-lg bg-primary text-secondary hover:bg-blue-600 rounded-[24.5px] `}
+      className={`${font} ${styles} relative z-[2] flex items-center gap-2 px-4 py-2 min-[1800px]:text-[20px] text-lg bg-primary text-secondary hover:bg-blue-600 rounded-[24.5px] `}
     >
       <span> Track Your Package </span>
       <span

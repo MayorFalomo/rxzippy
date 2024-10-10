@@ -58,12 +58,12 @@ export const ContactForm: React.FC = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel className='font-montserrat' >Name</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       placeholder="Your Name"
-                      className="w-full min-w-0"
+                      className="w-full font-montserrat min-w-0"
                     />
                   </FormControl>
                   {form.formState.errors.name && (
@@ -81,13 +81,13 @@ export const ContactForm: React.FC = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="font-montserrat" >Email</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
                       {...field}
                       placeholder="Your Email"
-                      className="w-full min-w-0"
+                      className="w-full font-montserrat min-w-0"
                     />
                   </FormControl>
                   {form.formState.errors.email && (
@@ -105,12 +105,12 @@ export const ContactForm: React.FC = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel className="font-montserrat" >Message</FormLabel>
                   <FormControl>
                     <Textarea
                       {...field}
                       placeholder="Your Message"
-                      className="w-full"
+                      className="w-full font-montserrat"
                     />
                   </FormControl>
                   {form.formState.errors.message && (
@@ -125,7 +125,7 @@ export const ContactForm: React.FC = () => {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full bg-[#508CFF] hover:bg-blue-600 mt-4"
+              className="w-full font-montserrat bg-[#508CFF] hover:bg-blue-600 mt-4"
             >
               Submit
             </Button>

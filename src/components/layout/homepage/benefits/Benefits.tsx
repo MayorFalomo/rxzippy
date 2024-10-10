@@ -8,29 +8,26 @@ import FadeIn from "@/Animation/FadeIn";
 const Benefits: React.FC = () => {
   const [ref, inView] = useInView({
     threshold: 0.4,
-    // triggerOnce: true,
   });
 
   const [refOne, inViewOne] = useInView({
     threshold: 0.2,
-    // triggerOnce: true,
   });
 
   const [refTwo, inViewTwo] = useInView({
     threshold: 0.2,
-    // triggerOnce: true,
   });
 
   return (
-    <div className="bg-white min-h-[100vh] flex flex-col items-center justify-center my-[50px]  m-auto">
+    <div className="bg-white min-h-[100vh] min-[1800px]:min-h-[60vh] flex flex-col items-center justify-center my-[50px]  m-auto">
       <div
         ref={(el) => {
           ref(el);
           refOne(el);
         }}
-        className="h-[80%] w-[85%] m-auto  flex flex-col items-start justify-center max-[550px]:w-[95%]"
+        className="h-[80%] min-[1800px]:w-[1500px] w-[85%] m-auto  flex flex-col items-start justify-center max-[550px]:w-[95%]"
       >
-        <motion.h2 className=" font-stinger text-variant scroll-m-20 flex flex-col gap-1 w-fit text-3xl font-semibold tracking-tight first:mt-0">
+        <motion.h2 className=" font-tenorSans text-variant scroll-m-20 flex flex-col gap-1 w-fit text-3xl font-semibold tracking-tight first:mt-0">
           Benefits
           <motion.span
             initial={{ width: 0 }}
@@ -41,7 +38,7 @@ const Benefits: React.FC = () => {
           </motion.span>
         </motion.h2>
         <Texts
-          font="font-hkGrotesk"
+          font="font-montserrat"
           color="primary"
           size="md"
           variant="body"
@@ -77,17 +74,17 @@ const Benefits: React.FC = () => {
                 />
               </div>
               <div className="w-[90%] m-auto">
-                <h1 className=" font-darkerGrotesk text-[#030305] scroll-m-20 text-4xl max-[550px]:text-2xl font-extrabold tracking-tight lg:text-[45px]">
+                <h1 className=" font-tenorSans text-[#030305] scroll-m-20 text-4xl max-[550px]:text-2xl font-extrabold tracking-tight lg:text-[45px]">
                   {benefit.number}
                 </h1>
                 <Texts
-                  font="font-inter"
+                  font="font-tensorSans"
                   size="lg"
                   className="my-2 font-semibold max-[550px]:text-[16px] "
                 >
                   {benefit.title}
                 </Texts>
-                <Texts font="font-darkerGrotesk" variant="body" size="md">
+                <Texts font="font-montserrat text-[#3C3737]" variant="body" size="md">
                   {benefit.text}
                 </Texts>
               </div>

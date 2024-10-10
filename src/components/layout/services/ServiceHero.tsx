@@ -29,9 +29,9 @@ const ServiceHero: React.FC = () => {
             src={rectTwo}
             alt="img"
           />
-          <div className="absolute left-[10%] top-1/2 z-20 flex justify-between items-end w-[80%] m-auto  ">
+          <div className="absolute left-[10%] min-[1800px]:left-[19%] top-1/2 z-20 flex justify-between items-end min-[1800px]:w-[1500px] w-[80%] m-auto  ">
             <div ref={ref} className=" flex flex-col gap-[10px]">
-              <h1 className="flex flex-col gap-2 text-white text-[40px] leading-10 font-stinger scroll-m-20 font-bold tracking-wide">
+              <h1 className="flex flex-col gap-2 text-white text-[40px] leading-10 font-tenorSans scroll-m-20 font-bold tracking-wide">
                 <span>Courier </span>
                 <span>Services</span>
                 <motion.span
@@ -40,7 +40,6 @@ const ServiceHero: React.FC = () => {
                   transition={{ duration: 0.7 }}
                   className=" h-[1px] mt-2 w-[300px] bg-white"
                 ></motion.span>
-                {/* <span className=" h-[1px] mt-2 w-[250px] bg-white"></span> */}
               </h1>
             </div>
             <div className=" max-[750px]:hidden">

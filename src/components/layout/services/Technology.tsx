@@ -40,11 +40,10 @@ const Technology: React.FC = () => {
 
   const [ref, inView] = useInView({
     threshold: 0.4,
-    // triggerOnce: true,
   });
 
   return (
-    <div className=" mx-auto my-[50px] w-[85%] max-[500px]:w-[90%]">
+    <div className=" mx-auto my-[50px] min-[1800px]:w-[1500px] w-[85%] max-[500px]:w-[90%]">
       <div className="flex max-[750px]:flex-col items-center justify-between gap-[30px] mx-auto">
         <div className=" relative w-[600px] max-[750px]:w-full h-[400px]">
           <img
@@ -58,16 +57,14 @@ const Technology: React.FC = () => {
           ref={ref}
           className="flex flex-col gap-3 w-[500px] max-[750px]:w-full max-[750px]:my-[30px]"
         >
-          <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 font-hkGrotesk">
+          <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 font-tenorSans">
             Technology{" "}
           </h2>
-          {/* <Texts className=" "> */}
-          <TextMask customStyles="font-hkGrotesk leading-7" inView={inView}>
+          <TextMask customStyles="font-montserrat leading-7" inView={inView}>
             Utilizing the latest technology is one of the many things that sets
             RXZIPPY apart from other big-name logistics companies. Some of the
             technology we employ includes:{" "}
           </TextMask>
-          {/* </Texts> */}
           <div className="flex flex-col gap-2">
             {FAQS.map((faq: IProps, index: number) => (
               <div className="" key={index}>
@@ -96,7 +93,7 @@ const Faq = ({ faq, index }: IMapped) => {
           {isOpen ? <MinusIcon /> : <PlusIcon />}
         </span>
         <div className="flex flex-col gap-2">
-          <h3 className="mt-[3px]">{faq.title}</h3>
+          <h3 className="mt-[3px] font-tenorSans">{faq.title}</h3>
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{
@@ -106,7 +103,7 @@ const Faq = ({ faq, index }: IMapped) => {
             transition={{ ease: "easeOut" }}
             className="overflow-hidden "
           >
-            <Texts className="w-full">{faq.description}</Texts>
+            <Texts className="w-full font-montserrat">{faq.description}</Texts>
           </motion.div>
         </div>
       </div>

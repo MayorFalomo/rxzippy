@@ -1,10 +1,12 @@
 import Texts from "../../../texts/Texts";
-import TrackYourPackageBtn from "@/components/Button/TrackYourPackage";
 import heroImage from "../../../../assets/heroImage.webp";
 import vanVector from "@/assets/vanVector.webp";
 import heroIcon from "@/assets/homeHeroIcon.webp";
 import { AnimatePresence, motion, Variant } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Input } from "@/ui/input";
+import { Button } from "@/ui/button";
+import useRipple from "@/Animation/RippleEffect";
 
 interface IVariants {
   [key: string]: Variant;
@@ -40,8 +42,9 @@ const HeroSection = () => {
 
   const { ref, inView } = useInView({
     threshold: 0,
-    // triggerOnce: true,
   });
+    const { buttonRef, createRipple } = useRipple();
+
 
   return (
     <div className=" relative h-[90vh] max-[700px]:h-auto flex flex-col items-center justify-center ">
@@ -53,7 +56,7 @@ const HeroSection = () => {
           backgroundPosition: "left",
           backgroundSize: "cover",
         }}
-        className="relative flex max-[700px]:flex-col max-[700px]:justify-center min-[700px]:justify-between items-start gap-[10px]  w-[85%] max-[700px]:w-[100%] min-[700px]:h-[90%] max-[700px]:h-[100%] m-auto "
+        className="relative flex min-[1800px]:w-[1500px] max-[1800px]:w-[85%]  max-[700px]:flex-col max-[700px]:justify-center min-[700px]:justify-between items-start gap-[10px] max-[700px]:w-[100%] min-[700px]:h-[90%] max-[700px]:h-[100%] m-auto "
       >
         <div className=" h-full flex flex-col items-start max-[700px]:items-center justify-center max-[700px]:mx-auto  max-[700px]:text-center  max-[700px]:w-[95%] max-[700px]:mt-[60px]">
           <div ref={ref}>
@@ -64,7 +67,7 @@ const HeroSection = () => {
                   variants={containerVars}
                   initial="initial"
                   animate="open"
-                  className="max-[600px]:w-[100%] max-[600px]:block max-[600px]:ml-auto  overflow-hidden"
+                  className="max-[600px]:w-[100%] max-[600px]:block max-[600px]:ml-auto overflow-hidden"
                 >
                   <Staggered text={text} inview={inView} />
                 </motion.div>
@@ -73,17 +76,34 @@ const HeroSection = () => {
           </div>
 
           <Texts
-            className="leading-7 max-w-[310px] text-[18px] font-light max-[700px]:font-medium [&:not(:first-child)]:my-4 max-[700px]:w-full max-[700px]:mx-auto "
+            className="leading-7 max-w-[310px] min-[1800px]:text-[22px] min-[1800px]:leading-[30px] text-[18px] font-light max-[700px]:font-medium [&:not(:first-child)]:my-4 max-[700px]:w-full max-[700px]:mx-auto "
             // weight="light"
           >
             Get your packages delivered on time, every time.{" "}
           </Texts>
           <div className=" max-[700px]:w-full flex justify-center max-[700px]:mt-3">
-            <TrackYourPackageBtn seen={true} />
+              <div className="bg-bgPrimary drop-shadow-lg rounded-lg flex items-center w-fit py-4 px-3 ">
+            <div className="flex max-w-fit h-[50px] items-center">
+              <Input
+                className="bg-[#F6F7F8] text-md w-[300px] max-[900px]:w-full h-full placeholder:px-1 placeholder:font-montserrat placeholder:text-[#3C3737] placeholder:text-[12px] text-[#3C3737] outline-none focus-visible:ring-0 rounded-none border-none"
+                type="email"
+                placeholder="Enter your tracking number"
+              />
+              <Button
+                ref={buttonRef}
+                className="relative overflow-hidden bg-black h-full w-[200px] text-white rounded-md"
+                type="submit"
+                onMouseDown={createRipple}
+              >
+              Track your package
+              </Button>
+            </div>
+            </div>
+            {/* <TrackYourPackageBtn seen={true} /> */}
           </div>
 
           <ul className="flex items-center max-[700px]:justify-center w-full flex-wrap gap-4 mt-4 max-[700px]:my-[30px]">
-            <li className="flex items-center gap-1">
+            <li className="flex items-center gap-1 min-[1800px]:text-[20px] font-montserrat">
               <span>
                 <svg
                   color="#508CCF"
@@ -103,7 +123,7 @@ const HeroSection = () => {
               </span>
               <span>Reliability </span>{" "}
             </li>
-            <li className="flex items-center gap-1">
+            <li className="flex items-center gap-1 min-[1800px]:text-[20px] font-montserrat">
               <span>
                 <svg
                   color="#508CCF"
@@ -123,7 +143,7 @@ const HeroSection = () => {
               </span>
               <span>Speed </span>{" "}
             </li>
-            <li className="flex items-center gap-1">
+            <li className="flex items-center gap-1 min-[1800px]:text-[20px] font-montserrat">
               <span>
                 <svg
                   color="#508CCF"
@@ -197,7 +217,7 @@ const Staggered = ({ text, inview }: IProp) => {
       variants={mobileLinkVars}
       initial="initial"
       animate={inview ? "open" : "initial"}
-      className="scroll-m-20 font-stinger min-[900px]:text-[50px] max-[900px]:text-[40px] font-medium tracking-tight leading-[60px] min-[1500px]:text-[60px] max-[700px]:text-center max-[700px]:mx-auto  max-[700px]:w-full"
+      className="scroll-m-20 font-TenorSans min-[1700px]:text-[80px] min-[900px]:text-[50px] max-[900px]:text-[40px] font-medium tracking-tight leading-[60px] min-[1800px]:leading-[90px] min-[1500px]:text-[60px] max-[700px]:text-center max-[700px]:mx-auto  max-[700px]:w-full"
     >
       {text}
     </motion.h1>

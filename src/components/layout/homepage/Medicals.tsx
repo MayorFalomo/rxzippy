@@ -14,7 +14,7 @@ const Medicals = () => {
   });
   return (
     <div className=" bg-offWhite">
-      <div className="w-[85%] m-auto max-[480px]:w-[95%]">
+      <div className="min-[1800px]:w-[1500px] w-[85%] m-auto max-[480px]:w-[95%]">
         <div className=" flex justify-between items-end  gap-[20px] mt-[40px]">
           <div ref={ref} className="mt-[40px] max-[620px]:w-full ">
             <HeaderTexts

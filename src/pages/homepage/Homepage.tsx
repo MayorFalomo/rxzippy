@@ -8,8 +8,10 @@ import Medicals from "@/components/layout/homepage/Medicals";
 import Subscribe from "@/components/layout/homepage/Subcribe";
 import Footer from "@/components/layout/homepage/footer/Footer";
 import SmoothScroll from "@/Animation/SmoothScroll";
+import useScrollToTop from "@/components/contactForm/ScrollToTop";
 
 const Homepage = () => {
+  useScrollToTop();
   return (
     <SmoothScroll>
       <div className=" overflow-x-hidden">

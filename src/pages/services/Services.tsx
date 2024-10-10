@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "@/components/layout/homepage/footer/Footer";
-import AfforableService from "@/components/layout/services/AfforableService";
+import AffordableService from "@/components/layout/services/AfforableService";
 import ServiceAreas from "@/components/layout/services/ServiceAreas";
 import ServiceDelivery from "@/components/layout/services/ServiceDelivery";
 import ServiceHero from "@/components/layout/services/ServiceHero";
@@ -17,7 +17,7 @@ const Services: React.FC = () => {
         <ServiceAreas />
         <Technology />
         <ServiceDelivery />
-        <AfforableService />
+        <AffordableService />
         <Footer showForm={false} />
       </div>
     </SmoothScroll>

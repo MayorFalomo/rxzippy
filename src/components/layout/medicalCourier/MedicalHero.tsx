@@ -28,9 +28,9 @@ const MedicalHero = () => {
             src={rectTwo}
             alt="img"
           />
-          <div className="absolute left-[10%] top-1/2 z-20 flex justify-between items-end w-[80%] m-auto  ">
+          <div className="absolute min-[1800px]:left-[19%] left-[10%] top-1/2 z-20 flex justify-between items-end min-[1800px]:w-[1500px] w-[80%] m-auto  ">
             <div ref={ref} className=" flex flex-col gap-[10px]">
-              <h1 className="flex flex-col gap-2 text-white text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] leading-10 font-stinger scroll-m-20 font-bold tracking-wide">
+              <h1 className="flex flex-col gap-2 text-white min-[1800px]:text-[60px] text-[40px] max-[700px]:text-[35px] max-[480px]:text-[32px] min-[1800px]:leading-[60px] leading-10 font-tenorSans scroll-m-20 font-bold tracking-wide">
                 <span>Medical Courier </span>
                 <span>Services</span>
                 <motion.span
