@@ -1,4 +1,4 @@
-import useScrollToTop from "@/components/contactForm/scrollToTop";
+import useScrollToTop from "@/components/ScrollToTop";
 import About from "@/components/layout/company/About";
 import CompanyHero from "@/components/layout/company/CompanyHero";
 import Footer from "@/components/layout/homepage/footer/Footer";

@@ -1,4 +1,4 @@
-import useScrollToTop from "@/components/contactForm/scrollToTop";
+import useScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/layout/homepage/footer/Footer";
 import BestFor from "@/components/layout/medicalCourier/BestFor";
 import MedicalHero from "@/components/layout/medicalCourier/MedicalHero";
