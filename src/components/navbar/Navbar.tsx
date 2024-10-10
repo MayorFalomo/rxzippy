@@ -49,7 +49,7 @@ export function Navbar() {
         <div
           className={`flex items-center gap-[20px] py-2 px-2 transition-colors duration-500`}
         >
-          <div className="flex items-center relative">
+          <div className="flex items-center max-[960px]:relative">
             <Link to={nav.path}>{nav.navItem} </Link>
             {nav.path === '/services' && (
               <span className="px-2 z-60">{<IoIosArrowDown />}</span>
@@ -62,7 +62,7 @@ export function Navbar() {
             <div
               onMouseLeave={() => setShowServiceBar('')}
               onMouseEnter={() => setShowServiceBar('/services')}
-              className="absolute min-[960px]:left-0 max-[960px]:left-[-150px] max-[960px]:bottom-[-200px] max-[960px]:w-[400px]   min-[960px]:bottom-[-180px] min-[960px]:w-[100vw] max-[960px]:max-w-[600px] max-[600px]:max-w-[500px] max-[450px]:w-[250px]  max-[600px]:left-[-80px] max-[600px]:bottom-[-250px] bg-white py-4 z-50"
+              className="absolute left-0 min-[960px]:bottom-[-180px] min-[960px]:left-0 max-[960px]:left-[-150px] max-[960px]:bottom-[-200px] max-[960px]:w-[400px] min-[960px]:w-[100vw] max-[960px]:max-w-[600px] max-[600px]:max-w-[500px] max-[450px]:w-[250px]  max-[600px]:left-[-80px] max-[600px]:bottom-[-250px] bg-white py-4 z-50"
             >
               <div className="flex flex-col items-start justify-start gap-[15px] relative z-20 px-2 text-offBlack text-[18px] bg-white">
                 <Link
