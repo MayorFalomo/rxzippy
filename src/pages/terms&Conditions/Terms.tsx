@@ -1,4 +1,4 @@
-import useScrollToTop from '@/components/contactForm/ScrollToTop'
+import useScrollToTop from '@/components/ScrollToTop'
 import Footer from '@/components/layout/homepage/footer/Footer'
 import { Navbar } from '@/components/navbar/Navbar'
 import TermsAndCond from '@/components/terms&conditions/TermsAndCond'
