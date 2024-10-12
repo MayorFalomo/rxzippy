@@ -1,4 +1,7 @@
-import atrium from "@/assets/atrium.png";
+import reliable from "@/assets/RELIABLE.png";
+import cost from "@/assets/COST.png";
+import tracking from "@/assets/Tracking.png";
+import speed from "@/assets/SPEED.png";
 
 export const benefits = [
   {
@@ -7,7 +10,7 @@ export const benefits = [
     title: "Cost-Effective Solutions",
     text:
       "RXZippy offers competitive pricing to ensure you get the best for your money.",
-    img: atrium,
+    img: cost,
   },
   {
     id: 2,
@@ -15,7 +18,7 @@ export const benefits = [
     title: "Real-Time Tracking",
     text:
       "Stay updated with the exact location of your package at all times through our cutting-edge tracking system.",
-    img: atrium,
+    img: tracking,
   },
   {
     id: 3,
@@ -23,7 +26,7 @@ export const benefits = [
     title: "Reliable Deliveries",
     text:
       " RXZippy offers refrigerated delivery services to ensure your goods in optimal condition.",
-    img: atrium,
+    img: reliable,
   },
   {
     id: 4,
@@ -31,6 +34,6 @@ export const benefits = [
     title: "Speed & Efficiency",
     text:
       " RXZippy offers competitive pricing to ensure you get the best value for your money.",
-    img: atrium,
+    img: speed,
   },
 ];
