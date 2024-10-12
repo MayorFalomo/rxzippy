@@ -2,6 +2,7 @@ import boxes from "../../../assets/boxes.webp";
 import TextMask from "@/Animation/TextMask";
 import { useInView } from "react-intersection-observer";
 import vanVector from "@/assets/vanVector.webp";
+import { Link } from "react-router-dom";
 
 const AfforableService = () => {
   const [ref, inView] = useInView({
@@ -52,12 +53,15 @@ const AfforableService = () => {
         </div>
       </div>
       <div ref={refOne} className=" my-[100px]">
+         <Link to='/contact' >
+          <button className="scroll-m-20 flex justify-center mx-auto text-center border-2 border-[#508CFF] bg-transparent px-6 py-3 hover:bg-[#508CFF] hover:text-white transition duration-700 ease-out rounded-[10px] font-montserrat text-[#433E3E] text-[20px] font-medium tracking-wide lg:text-[24px]">
         <TextMask
           inView={inViewOne}
-          customStyles="scroll-m-20 text-center font-tensorSans text-[#433E3E] text-4xl font-semibold tracking-wide lg:text-5xl"
         >
           Contact us!
         </TextMask>
+          </button>
+        </Link>
       </div>
     </div>
   );
