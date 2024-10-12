@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 import FadeIn from "@/Animation/FadeIn";
 import { FAQS, IProps } from ".";
 import { Link } from "react-router-dom";
+import TextMask from "@/Animation/TextMask";
 
 type IMapped = {
   faq: IProps;
@@ -87,12 +88,15 @@ const MedicalTechnology: React.FC = () => {
         </div>
       </div>
       <div ref={ref} className="flex justify-center my-[100px]">
-       
-          <Link to='/contact' ><button className="scroll-m-20 text-center border-2 border-[#508CFF] bg-transparent px-6 py-3 hover:bg-[#508CFF] hover:text-white transition duration-700 ease-out rounded-[10px] font-montserrat text-[#433E3E] text-[20px] font-medium tracking-wide lg:text-[24px]">
-
+        <Link to='/contact' >
+          <button className="scroll-m-20 flex justify-center mx-auto text-center border-2 border-[#508CFF] bg-transparent px-6 py-3 hover:bg-[#508CFF] hover:text-white transition duration-700 ease-out rounded-[10px] font-montserrat text-[#433E3E] text-[20px] font-medium tracking-wide lg:text-[24px]">
+        <TextMask
+          inView={inViewOne}
+        >
           Contact us!
-          </button></Link>
-       
+        </TextMask>
+          </button>
+        </Link>
       </div>
     </div>
   );

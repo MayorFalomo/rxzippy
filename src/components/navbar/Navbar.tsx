@@ -49,13 +49,13 @@ export function Navbar() {
         <div
           className={`flex items-center gap-[20px] py-2 px-2 transition-colors duration-500`}
         >
-          <div className="flex items-center max-[960px]:relative">
-            <Link to={nav.path}>{nav.navItem} </Link>
+          <div className="flex items-center max-[960px]:relative min-[960px]:group">
+            <Link className='min-[960px]:group-hover:underline underline-offset-4'  to={nav.path}>{nav.navItem} </Link>
             {nav.path === '/services' && (
               <span className="px-2 z-60">{<IoIosArrowDown />}</span>
             )}
             {nav.id &&
-              <span className="absolute bottom-[-8px] z-20 left-0 w-full h-[2px] bg-white scale-x-0 origin-bottom-right group-hover:scale-x-100 group-hover:origin-bottom-left transition-transform duration-500 ease-out"></span>
+              <span className="min-[960px]:hidden absolute bottom-[-8px] z-20 left-0 w-full h-[2px] bg-white scale-x-0 origin-bottom-right group-hover:scale-x-100 group-hover:origin-bottom-left transition-transform duration-500 ease-out"></span>
             }
 
           {showServiceBar === '/services' && nav.path === '/services' && (

@@ -238,22 +238,36 @@ const Footer = ({ showForm, givePadding }: IProps) => {
             </div>
           </div>
         </div>
-         <div className="bg-bgPrimary drop-shadow-lg rounded-lg flex justify-center items-center mx-auto w-fit py-4 px-3 mb-6">
-            <div className="flex max-w-fit h-[50px] items-center">
-              <Input
-                className="bg-[#F6F7F8] text-md w-[300px] max-[900px]:w-full h-full placeholder:px-1 placeholder:font-montserrat placeholder:text-[#3C3737] placeholder:text-[12px] text-[#3C3737] outline-none focus-visible:ring-0 rounded-none border-none"
-                type="email"
-                placeholder="Enter your tracking number"
-              />
-              <Button
-                ref={buttonRef}
-                className="relative overflow-hidden bg-black h-full w-[200px] text-white rounded-md"
-                type="submit"
-                onMouseDown={createRipple}
-              >
-              Track your package
-              </Button>
-            </div>
+          <div className="bg-bgPrimary drop-shadow-lg rounded-lg flex justify-center items-center mx-auto w-fit py-4 px-3 mb-6">
+              <form name="trForm" method="post" action="https://www.ontime360.com/tracking/trackingresults.aspx" id="trForm">
+                    <div>
+                        <table>
+                            <tr>
+                                <td className="flex max-w-fit h-[50px] items-center">
+                                    <Input 
+                                      name="TrackingNumber" 
+                                      type="text" 
+                                      id="TrackingNumber"
+                                      className="bg-[#F6F7F8] text-md w-[300px] max-[900px]:w-full h-full placeholder:px-1 placeholder:font-montserrat placeholder:text-[#3C3737] placeholder:text-[12px] text-[#FFFFFF] outline-none focus-visible:ring-0 rounded-none border-none"
+                                      placeholder="Enter your tracking number" 
+                                    />&nbsp;
+                                    <Button 
+                                      ref={buttonRef}
+                                      type="submit" 
+                                      name="btnSubmit" 
+                                      value="Submit"  
+                                      id="btnSubmit" 
+                                      className="relative overflow-hidden bg-black h-full w-[200px] text-white rounded-md"
+                                      onMouseDown={createRipple}
+                                    >
+                                      Track your package
+                                    </Button>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="accid" id="accid" value="eWsGJySzqgBt7EuIGT38OjICHhr57svTmGqyJnBc/9dku07GLviOUQ==" />
+                    </div>
+                </form>
             </div>
         {/* <p className="my-[20px] font-montserrat flex justify-center gap-[7px]">
           <span> Terms and conditions</span> <span>Privacy policy </span>{" "}
