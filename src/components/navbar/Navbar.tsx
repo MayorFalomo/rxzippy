@@ -49,7 +49,7 @@ export function Navbar() {
         <div
           className={`flex items-center gap-[20px] py-2 px-2 transition-colors duration-500`}
         >
-          <div className="flex items-center max-[960px]:relative hover:underline underline-offset-4">
+          <div className="flex items-center max-[960px]:relative min-[960px]:hover:underline underline-offset-4">
             <Link  to={nav.path}>{nav.navItem} </Link>
             {nav.path === '/services' && (
               <span className="px-2 z-60">{<IoIosArrowDown />}</span>
