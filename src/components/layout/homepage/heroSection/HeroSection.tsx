@@ -77,7 +77,6 @@ const HeroSection = () => {
 
           <Texts
             className="leading-7 max-w-[310px] min-[1800px]:text-[22px] min-[1800px]:leading-[30px] text-[18px] font-light max-[700px]:font-medium [&:not(:first-child)]:my-4 max-[700px]:w-full max-[700px]:mx-auto "
-            // weight="light"
           >
             Get your packages delivered on time, every time.{" "}
           </Texts>
