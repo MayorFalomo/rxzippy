@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AIGirl from "@/assets/gorgeousGirl.webp";
 import Texts from "@/components/texts/Texts";
 import { MinusIcon, PlusIcon } from "@radix-ui/react-icons";
@@ -15,11 +15,12 @@ type IMapped = {
 };
 
 const MedicalTechnology: React.FC = () => {
-  const [ref] = useInView({
-    threshold: 0.3,
+  
+  const [refOne, inViewOne] = useInView({
+    threshold: 0.2,
   });
 
-  const [refOne, inViewOne] = useInView({
+  const [refTwo, inViewTwo] = useInView({
     threshold: 0.2,
   });
 
@@ -87,11 +88,11 @@ const MedicalTechnology: React.FC = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className="flex justify-center my-[100px]">
+      <div ref={refTwo} className="flex justify-center my-[100px]">
         <Link to='/contact' >
           <button className="scroll-m-20 flex justify-center mx-auto text-center border-2 border-[#508CFF] bg-transparent px-6 py-3 hover:bg-[#508CFF] hover:text-white transition duration-700 ease-out rounded-[10px] font-montserrat text-[#433E3E] text-[20px] font-medium tracking-wide lg:text-[24px]">
         <TextMask
-          inView={inViewOne}
+          inView={inViewTwo}
         >
           Contact us!
         </TextMask>

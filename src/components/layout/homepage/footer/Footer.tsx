@@ -32,7 +32,7 @@ const Footer = ({ showForm, givePadding }: IProps) => {
     // },
     {
       id: 4,
-      url: "/about",
+      url: "/company",
       page: "About",
     },
     {
