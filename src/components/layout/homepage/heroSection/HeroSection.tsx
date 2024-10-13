@@ -112,7 +112,6 @@ const HeroSection = () => {
                     </div>
                 </form>
             </div>
-            {/* <TrackYourPackageBtn seen={true} /> */}
           </div>
 
           <ul className="flex items-center max-[700px]:justify-center w-full flex-wrap gap-4 mt-4 max-[700px]:my-[30px]">
@@ -200,7 +199,6 @@ const HeroSection = () => {
           <span className=" absolute z-[2] min-[700px]:right-[-30px] max-[700px]:right-[-20px] bottom-[-50px] bg-primary h-[70px] w-[70px] max-[700px]:w-[60px] max-[700px]:h-[60px] "></span>
         </div>
       </div>
-      {/* <BookNow /> */}
     </div>
   );
 };
