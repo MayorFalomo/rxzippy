@@ -1,7 +1,5 @@
 import { ContactForm } from "@/components/contactForm/ContactForm";
 import Texts from "@/components/texts/Texts";
-import joy from "../../../../assets/joy.webp";
-import peter from "../../../../assets/peter.webp";
 import { RiPlayMiniFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { Input } from "@/ui/input";
@@ -148,35 +146,6 @@ const Footer = ({ showForm, givePadding }: IProps) => {
                   necessary information for becoming a courier.{" "}
                 </Texts>
                 <ul className="flex items-center gap-2">
-                  <li>
-                    <img
-                      className="w-[30px] rounded-full"
-                      src={peter}
-                      alt="img"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      className="w-[30px] rounded-full"
-                      src={peter}
-                      alt="img"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      className="w-[30px] rounded-full"
-                      src={peter}
-                      alt="img"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      className="w-[30px] rounded-full"
-                      src={joy}
-                      alt="img"
-                    />
-                  </li>
-
                   <span className=" text-[30px] rounded-full border-2 border-white">
                     {<RiPlayMiniFill />}{" "}
                   </span>
