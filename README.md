@@ -34,8 +34,8 @@ Running the App
 To start the development server, use the following command:
 
 Copy
-yarn dev
-This will start the app in development mode. Open your browser and navigate to http://localhost:3000 (or the port specified in your Vite configuration) to view the app.
+yarn run dev
+This will start the app in development mode. Open your browser and navigate to http://localhost:5173 (or the port specified in your Vite configuration) to view the app.
 
 Building for Production
 To create a production build of the app, run:

@@ -101,7 +101,7 @@ export function Navbar() {
 
   return (
     <nav className="bg-primary relative">
-      <div className="flex min-[1800px]:w-[1500px] max-[1800px]:w-[85%] m-auto items-center justify-between max-[750px]:py-4 py-1 ">
+      <div className="flex min-[1800px]:w-[1500px] max-[1800px]:w-[85%] m-auto items-center justify-between ">
         <div className="max-w-[100px]">
           <Link to="/">
             <img className="w-full" src={Logo} alt="img" />
